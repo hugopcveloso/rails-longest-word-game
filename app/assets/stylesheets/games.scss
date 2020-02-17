@@ -10,16 +10,23 @@
 }
 
 .container {
+  background-color: #fffff6;
   box-shadow: 2px 4px lightgrey;
-  padding:10px;
+  padding:40px;
+  margin:10px auto;
+  font-size:20px;
 }
 
 .button {
-  border-radius: 5px;
+  border-radius: 10px;
   background-color:lightblue;
   text-decoration:none;
   padding:15px;
   text-align:center;
   color:white;
   font-weight:bold;
+}
+
+h2 {
+  font-size:30px;
 }
