@@ -1,0 +1,11 @@
+
+<div class = container>
+  <h1>Result</h1>
+  <h2> Your word was :<%=params[:word]%> </h2>
+  <h2> <%= @results[:message] %> </h2>
+  <div class="button">
+    <%= link_to "Try again", new_path %>
+  </div>
+
+</div>
+
