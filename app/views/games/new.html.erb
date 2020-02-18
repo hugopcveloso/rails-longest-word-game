@@ -1,15 +1,17 @@
-<h1>New Game</h1>
-<div class="game">
+<h1 class = 'text-align m-3'>New Game</h1>
+<div class="game text-align m-3">
   <% @letters.each do |letter| %>
   <span id = 'items'><%= letter %></span>
   <% end %>
 </div>
 
-<div class = 'm-4'>
-  <form action="/score" method = 'post'>
+<div class = 'm-4 d-flex justify-content-center'>
+  <form action="/score" method = 'post' class = 'form-group w-50'>
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= hidden_field_tag 'letters', @letters %>
-    <input type="text" name="word">
-    <input type="submit" value="Play">
+    <div class="form-group d-flex">
+      <input type="text" name="word" class = 'form-control'>
+      <input type="submit" value="Play" class = 'btn' >
+    </div>
   </form>
 </div>

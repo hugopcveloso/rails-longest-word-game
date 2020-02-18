@@ -11,6 +11,9 @@ class GamesController < ApplicationController
     return @letters
   end
 
+  #refactored and guaranteed to have vowels.
+  #(['a','e','i','o','u'] + Array.new(5){('a'..'z').to_a.sample}).shuffle
+
   def score
     @results = {}
     if JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{params[:word]}").read)['found']
